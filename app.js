@@ -5,5 +5,13 @@ var Helloworld = /** @class */ (function () {
     return Helloworld;
 }());
 ;
+function LoggerAndReturn(thing) {
+    return thing;
+}
 var hello = new Helloworld('Welcome to Typescript');
 console.log(hello);
+//const message: string = LoggerAndReturn<string>("Badger badger badger")
+var message = LoggerAndReturn("Badger badger badger");
+var message2 = LoggerAndReturn(1);
+console.log(message);
+console.log(message2);
