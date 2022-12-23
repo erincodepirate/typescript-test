@@ -26,3 +26,15 @@ const strarr = getArray<string>(['hi', 'sup']);
 
 console.log(numarr);
 console.log(strarr);
+
+function getInfo<T, U>(id: T, name: U): void {
+    console.log(typeof id + ', ' + typeof name);
+}
+
+getInfo<number, string>(1, "badger");
+
+function displayType<T>(id: T, name: string): void {
+    console.log(typeof id + ', ' + typeof name);
+}
+
+displayType<number>(2, "Mushroom");

@@ -22,3 +22,11 @@ var numarr = getArray([1, 2, 3]);
 var strarr = getArray(['hi', 'sup']);
 console.log(numarr);
 console.log(strarr);
+function getInfo(id, name) {
+    console.log(typeof id + ', ' + typeof name);
+}
+getInfo(1, "badger");
+function displayType(id, name) {
+    console.log(typeof id + ', ' + typeof name);
+}
+displayType(2, "Mushroom");
