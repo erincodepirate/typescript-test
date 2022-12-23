@@ -55,3 +55,29 @@ function customerLogger<T extends Customer>(customer: T): void {
 
 let customer = new Customer('Jane', 'Doe');
 customerLogger(customer);
+
+interface Pair<T, U> {
+    first: T;
+    second: U;
+}
+
+let p: Pair<string, number> = {first: '10K', second: 10000};
+let person: Pair<string, string> = {first: 'hello', second: 'hi'};
+
+console.log(p);
+console.log(person);
+
+interface Command<T, R>{
+    id: T;
+    run(): R;
+}
+
+let c: Command<string, number> = {
+    id: Math.random().toString(36),
+    run: function() {
+        return 3;
+    }
+}
+
+console.log(c.id);
+console.log(c.run());

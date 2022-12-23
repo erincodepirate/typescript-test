@@ -42,3 +42,15 @@ function customerLogger(customer) {
 }
 var customer = new Customer('Jane', 'Doe');
 customerLogger(customer);
+var p = { first: '10K', second: 10000 };
+var person = { first: 'hello', second: 'hi' };
+console.log(p);
+console.log(person);
+var c = {
+    id: Math.random().toString(36),
+    run: function () {
+        return 3;
+    }
+};
+console.log(c.id);
+console.log(c.run());
