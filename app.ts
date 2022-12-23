@@ -146,3 +146,14 @@ numbers.add(13);
 numbers.remove(12);
 let numArray = numbers.asArray();
 console.log(numArray);
+
+function log(target, key, description) {
+    console.log(`${key} was called`);
+}
+
+class Calculator {
+    @log
+    square(n: number) {
+        return n * n;
+    }
+}

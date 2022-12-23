@@ -1,3 +1,9 @@
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var Helloworld = /** @class */ (function () {
     function Helloworld(message) {
         console.log(message);
@@ -101,3 +107,17 @@ numbers.add(13);
 numbers.remove(12);
 var numArray = numbers.asArray();
 console.log(numArray);
+function log(target, key, description) {
+    console.log("".concat(key, " was called"));
+}
+var Calculator = /** @class */ (function () {
+    function Calculator() {
+    }
+    Calculator.prototype.square = function (n) {
+        return n * n;
+    };
+    __decorate([
+        log
+    ], Calculator.prototype, "square", null);
+    return Calculator;
+}());
