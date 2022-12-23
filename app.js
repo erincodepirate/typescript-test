@@ -15,3 +15,10 @@ var message = LoggerAndReturn("Badger badger badger");
 var message2 = LoggerAndReturn(1);
 console.log(message);
 console.log(message2);
+function getArray(items) {
+    return new Array().concat(items);
+}
+var numarr = getArray([1, 2, 3]);
+var strarr = getArray(['hi', 'sup']);
+console.log(numarr);
+console.log(strarr);

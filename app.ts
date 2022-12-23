@@ -16,3 +16,13 @@ const message = LoggerAndReturn("Badger badger badger")
 const message2 = LoggerAndReturn<number>(1);
 console.log(message);
 console.log(message2);
+
+function getArray<T>(items: T[]): T[] {
+    return new Array<T>().concat(items);
+}
+
+const numarr = getArray<number>([1, 2, 3]);
+const strarr = getArray<string>(['hi', 'sup']);
+
+console.log(numarr);
+console.log(strarr);
